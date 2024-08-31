@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.*;
+import java.util.regex.Matcher;
 
 public class Main {
 
@@ -143,6 +144,12 @@ public class Main {
         }
     }
 
+    public static boolean isLetter(String letter){
+        return letter.trim().length() == 1 &&
+               Character.isLetter(letter.charAt(0)) &&
+               letter.matches("[а-яА-Я]");
+    }
+
     public static void toOpenLetters(String word) {
         String openWord = word.contains("*") ? word : word.replaceAll("[а-яА-Я]", "*");
         StringBuilder updatedWord = new StringBuilder(openWord);
@@ -151,8 +158,8 @@ public class Main {
         while (!isOpenLetter) {
             String oldWord = updatedWord.toString();
             Scanner scanner = new Scanner(System.in);
-            String line = scanner.nextLine();
-            if (line.trim().length() == 1) {
+            String line = scanner.nextLine().toLowerCase();
+            if (isLetter(line)) {
                 if (symbols.contains(line)) {
                     System.out.println("Эта БУКВА уже ПРОВЕРЕНА");
                 }
@@ -165,7 +172,7 @@ public class Main {
                 System.out.println("Использованные буквы: " + symbols);
 
             } else {
-                System.out.println("Введите ОДНУ букву!");
+                System.out.println("Допускается ввод только русскоязычных букв!");
             }
         }
         System.out.println(INFO);
