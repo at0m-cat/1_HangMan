@@ -164,7 +164,6 @@ public class Main {
                 System.out.println("Состояние слова: " + updatedWord);
                 System.out.println("Использованные буквы: " + symbols);
 
-
             } else {
                 System.out.println("Введите ОДНУ букву!");
             }
