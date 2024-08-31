@@ -110,7 +110,11 @@ public class Main {
 
     public static String generationWord() {
         // генерируем слово
-        secretWord = STRINGS.get(new Random().nextInt(STRINGS.size()));
+        boolean isSize = false;
+        while (!isSize) {
+            secretWord = STRINGS.get(new Random().nextInt(STRINGS.size()));
+            isSize = secretWord.length() > 6;
+        }
         return secretWord;
     }
 
@@ -149,13 +153,17 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             String line = scanner.nextLine();
             if (line.trim().length() == 1) {
+                if (symbols.contains(line)) {
+                    System.out.println("Эта БУКВА уже ПРОВЕРЕНА");
+                }
                 if (!symbols.contains(line)) {
                     symbols.add(line);
+                    updatedWord = findLetter(updatedWord, line.toLowerCase().charAt(0));
+                    equalsWords(oldWord, updatedWord.toString());
                 }
-                updatedWord = findLetter(updatedWord, line.toLowerCase().charAt(0));
-                equalsWords(oldWord, updatedWord.toString());
                 System.out.println("Состояние слова: " + updatedWord);
                 System.out.println("Использованные буквы: " + symbols);
+
 
             } else {
                 System.out.println("Введите ОДНУ букву!");
