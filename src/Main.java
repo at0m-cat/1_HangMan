@@ -130,13 +130,11 @@ public class Main {
             if (errorCount == 6) {
                 System.out.println(LOOSE);
                 System.out.println("Слово: " + secretWord);
-                System.out.println(INFO);
                 isOpenLetter = true;
             }
         }
         if (secretWord.equals(word2)) {
             System.out.println(WIN);
-            System.out.println(INFO);
             isOpenLetter = true;
         }
     }
@@ -163,6 +161,7 @@ public class Main {
                 System.out.println("Введите ОДНУ букву!");
             }
         }
+        System.out.println(INFO);
     }
 
     public static void endedGame() {
