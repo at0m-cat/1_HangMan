@@ -146,8 +146,8 @@ public class Main {
     public static void toOpenLetters(String word) {
         String openWord = word.contains("*") ? word : word.replaceAll("[а-яА-Я]", "*");
         StringBuilder updatedWord = new StringBuilder(openWord);
-        System.out.println(openWord);
         ArrayList<String> symbols = new ArrayList<>();
+        System.out.println("Загадано слово: " + openWord);
         while (!isOpenLetter) {
             String oldWord = updatedWord.toString();
             Scanner scanner = new Scanner(System.in);
@@ -178,6 +178,8 @@ public class Main {
 
     public static void startGame() {
         // механика игры
+        isOpenLetter = false;
+        errorCount = 0;
         toOpenLetters(generationWord());
     }
 
