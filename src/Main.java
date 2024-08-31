@@ -130,6 +130,7 @@ public class Main {
             if (errorCount == 6) {
                 System.out.println(LOOSE);
                 System.out.println("Слово: " + secretWord);
+                System.out.println(INFO);
                 isOpenLetter = true;
             }
         }
