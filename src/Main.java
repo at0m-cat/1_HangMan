@@ -11,8 +11,8 @@ public class Main {
     private static final String WIN = "Вы победили!";
     private static final String LOOSE = "Вы проиграли!";
     private static final String INFO = """
-            N - new game
-            E - exit""";
+            1 - new game
+            2 - exit""";
     private static int errorCount = 0;
     private static boolean isGame = true;
     private static boolean isOpenLetter = false;
