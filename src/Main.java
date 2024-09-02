@@ -193,10 +193,10 @@ public class Main {
     public static void action(String command) {
         // выбор действия - новая игра, выход из игры
         switch (command.strip().toLowerCase()) {
-            case "n" -> {
+            case "1" -> {
                 startGame();
             }
-            case "e" -> {
+            case "2" -> {
                 endedGame();
             }
             default -> System.out.println(INFO);
