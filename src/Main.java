@@ -194,6 +194,7 @@ public class Main {
         // выбор действия - новая игра, выход из игры
         switch (command.strip().toLowerCase()) {
             case "1" -> {
+                GallowsAnsi gallows = new GallowsAnsi();
                 startGame();
             }
             case "2" -> {
@@ -206,6 +207,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(INFO);
+
         while (isGame) {
             String line = scanner.nextLine();
             if (line.trim().length() == 1) {
