@@ -39,7 +39,7 @@ public class Hangman {
         if(secretWord.contains(userLetter)){
             System.out.println("В слове есть данная буква!");
         }
-        System.out.println(getUserLettersToString());
+        System.out.println("Ваши буквы: " + getUserLettersToString());
         System.out.println(getUserWord());
     }
 
