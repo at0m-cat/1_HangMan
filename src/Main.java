@@ -28,8 +28,6 @@ public class Main {
     }
 
     public static void gameLoop() {
-//        System.out.printf("Загадано [RU] слово: %s, отгадайте буквы!%nДопускается 5 ошибок%n",
-//                Hangman.setMaskToText(Hangman.secretWord));
         Hangman.infoStartText();
 
         String formedWordUser = "";
