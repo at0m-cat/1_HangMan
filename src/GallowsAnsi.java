@@ -1,12 +1,6 @@
-import javax.sql.RowSetListener;
-import java.util.ArrayList;
-import java.util.List;
-
 class GallowsAnsi {
 
-
-
-     String[] gallows = new String[]{
+     static final String[] gallows = new String[]{
             """
                         |
                         |   1 / 6
@@ -76,7 +70,5 @@ class GallowsAnsi {
                         |____________________"""
 
     };
-
-
 
 }
