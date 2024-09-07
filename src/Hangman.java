@@ -90,6 +90,10 @@ public class Hangman {
         return secretWord.contains(letter);
     }
 
+    public static boolean isGameOver(){
+        return isWin(userWord) || isLoss(gallowsCount);
+    }
+
     public static void textForWinners(){
         System.out.println("Вы победили. Можете начать игру снова, либо выйти.\n");
     }

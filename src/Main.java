@@ -32,7 +32,7 @@ public class Main {
 
         String formedWordUser = "";
 
-        while (true) {
+        while (!Hangman.isGameOver()) {
             if (Hangman.isWin(Hangman.userWord)) {
                 Hangman.textForWinners();
                 break;
