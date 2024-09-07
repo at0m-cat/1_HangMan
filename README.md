@@ -46,13 +46,13 @@
 1. Склонируйте репозиторий к себе на компьютер:
 
     ```bash
-    git clone https://github.com/ваш-username/hangman-game.git
+    git clone https://github.com/at0m-cat/1_HangMan.git
     ```
 
 2. Перейдите в папку проекта:
 
     ```bash
-    cd hangman-game
+    cd 1_HangMan
     ```
 
 3. Убедитесь, что у вас есть файл `russian-nouns.txt` с набором русских слов для игры. Разместите его в папке `src`.
