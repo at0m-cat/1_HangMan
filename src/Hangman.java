@@ -42,7 +42,7 @@ public class Hangman {
             System.out.println("В слове нет этой буквы!");
         }
         System.out.println("Ваши буквы: " + getUserLettersToString());
-        System.out.println("Состояние слова: " + getUserWord().toUpperCase());
+        System.out.println("Состояние слова: " + getUserWord().toUpperCase() + "\n");
     }
 
     public static String getGallows(int gallowsCount) {
