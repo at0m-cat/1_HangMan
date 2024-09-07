@@ -5,7 +5,6 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Hangman.infoStartText();
 
         while (true) {
             System.out.println(Constants.INFO);
@@ -29,8 +28,9 @@ public class Main {
     }
 
     public static void gameLoop() {
-        System.out.printf("Загадано слово: %s, отгадайте буквы!%n",
-                Hangman.setMaskToText(Hangman.secretWord));
+//        System.out.printf("Загадано [RU] слово: %s, отгадайте буквы!%nДопускается 5 ошибок%n",
+//                Hangman.setMaskToText(Hangman.secretWord));
+        Hangman.infoStartText();
 
         String formedWordUser = "";
 

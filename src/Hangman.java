@@ -99,6 +99,7 @@ public class Hangman {
     }
 
     public static void infoStartText(){
-        System.out.println("\n\tHANGMAN: 6 attempts to guess the word by letters!\n");
+        System.out.printf("Загадано [RU] слово: \"%s\" из %d букв!%nОтгадайте буквы! Допускается 5 ошибок. Вводи букву и жми [enter]!%n",
+                setMaskToText(Hangman.secretWord), secretWord.length());
     }
 }
