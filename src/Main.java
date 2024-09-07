@@ -32,15 +32,7 @@ public class Main {
 
         String formedWordUser = "";
 
-        while (true) {
-            if (Hangman.isWin(Hangman.userWord)) {
-                Hangman.textForWinners();
-                break;
-            }
-            if (Hangman.isLoss(Hangman.gallowsCount)) {
-                Hangman.textForLosers();
-                break;
-            }
+        while (!Hangman.isGameOver()) {
             formedWordUser = Hangman.userWord;
             String letterUser = Hangman.addLetterUser();
             if (Hangman.isPastLetters(letterUser)) {
@@ -58,7 +50,12 @@ public class Main {
             } else {
                 System.out.println(letterUser);
             }
-
+        }
+        if (Hangman.isWin(Hangman.userWord)) {
+            Hangman.textForWinners();
+        }
+        if (Hangman.isLoss(Hangman.gallowsCount)) {
+            Hangman.textForLosers();
         }
     }
 }
