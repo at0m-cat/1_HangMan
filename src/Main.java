@@ -4,10 +4,12 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println(Constants.INFO);
+            System.out.print(Constants.INPUT);
             String command = scanner.nextLine();
             switch (command.toLowerCase()) {
                 case Constants.COMMAND_PLAY -> {

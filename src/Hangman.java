@@ -59,6 +59,7 @@ public class Hangman {
 
     public static String addLetterUser() {
         Scanner scanner = new Scanner(System.in);
+        System.out.print(Constants.INPUT);
         String textUser = scanner.nextLine();
         if (isLetter(textUser)) {
             return textUser.toLowerCase();
@@ -105,7 +106,7 @@ public class Hangman {
     }
 
     public static void infoStartText(){
-        System.out.printf("Загадано [RU] слово: \"%s\" из %d букв!%nОтгадайте буквы! Допускается 5 ошибок. Вводи букву и жми [enter]!%n",
+        System.out.printf("\nЗагадано [RU] слово: \"%s\" из %d букв!%nОтгадайте буквы! Допускается 5 ошибок. Вводи букву и жми [enter]!%n",
                 setMaskToText(Hangman.secretWord), secretWord.length());
     }
 }
