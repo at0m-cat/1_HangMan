@@ -38,9 +38,11 @@ public class Hangman {
 
         if(secretWord.contains(userLetter)){
             System.out.println("В слове есть данная буква!");
+        } else {
+            System.out.println("В слове нет этой буквы!");
         }
         System.out.println("Ваши буквы: " + getUserLettersToString());
-        System.out.println(getUserWord());
+        System.out.println("Состояние слова: " + getUserWord().toUpperCase());
     }
 
     public static String getGallows(int gallowsCount) {
